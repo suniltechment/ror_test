@@ -1,0 +1,21 @@
+
+
+<h1>Listing TV Shows</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Time</th>
+    <th>Channel </th>
+  </tr>
+ 
+  <% @shows.each do |show| %>
+    <tr>
+      <td><%= show.show_title %></td>
+      <td><%= show.time %></td>
+      <td><%channal = show.channel_id %>
+      	<%= Channel.find(channal).name %>
+      </td>
+    </tr>
+  <% end %>
+</table>
