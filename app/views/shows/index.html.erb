@@ -16,6 +16,11 @@
       <td><%channal = show.channel_id %>
       	<%= Channel.find(channal).name %>
       </td>
+      <td><%#= link_to 'favorate', method: :post, favorites_path(show.id) %>
+      	<%#= link_to 'favorate', favorites_path(show.id),
+              method: "post" %>
+        <%= link_to "favorate", favorites_path(show_id: show.id), :method=> :post %>      
+      </td>
     </tr>
   <% end %>
 </table>

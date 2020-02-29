@@ -1,4 +1,18 @@
 <center><h1>Welcome to TV Show</h1></center><br>
 <%= link_to 'Channel', channels_path %> || <%= link_to 'shows', shows_path %>
 
+<h1> MY favarote </h1><br>
+
+<% @favorites.each do |fav| %>
+    <tr>
+      <td>
+      	<%= Show.find(fav.show_id).show_title %><br>
+      </td>
+      <td><%#= show.time %></td>
+     
+      </td>
+    </tr>
+  <% end %>
+
+
 
